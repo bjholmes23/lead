@@ -2,6 +2,24 @@ source 'http://ruby.taobao.org'
 
 gem 'rails', '3.2.11'
 
+gem 'twitter-bootstrap-rails'
+gem 'carrierwave', '0.6.2'
+gem "mini_magick"
+gem 'execjs'
+gem 'therubyracer'
+gem "rmagick"
+gem "less-rails"
+gem "remotipart", "~> 1.0"
+gem "geocoder"
+gem 'bcrypt-ruby', '3.0.1'
+gem 'best_in_place'
+gem "ckeditor"
+gem 'contact_us', '~> 0.4.0'
+
+group :development do
+  gem 'annotate', '2.5.0'
+end
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 

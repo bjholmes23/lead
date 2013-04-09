@@ -11,5 +11,14 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
+//= require jquery-ui
 //= require jquery_ujs
+//= require best_in_place
+//= require best_in_place.purr
+//= require twitter/bootstrap
+//= require ckeditor/init
 //= require_tree .
+
+jQuery(".best_in_place").best_in_place();
+
+

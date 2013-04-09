@@ -1,0 +1,51 @@
+# /etc/apache2/sites-available/<%= application %>
+<VirtualHost *:80>
+	ServerName <%= application_domain %>
+	ServerAlias "www.<%= application_domain %>"
+	DocumentRoot "<%= current_path %>/public"
+
+	# be sure to point to public!!
+	<Directory "<%= current_path %>/public/">
+		AllowOverride all
+		Options -MultiViews
+	</Directory>
+
+	# Cache assets for super-long since name changes if updated
+	<LocationMatch "^/assets/.*-[0-9a-f]{32}.*$">
+		Header unset ETag
+		FileETag None
+		# RFC says only cache for 1 year
+		ExpiresActive On
+		ExpiresDefault "access plus 1 year"
+	</LocationMatch>
+
+
+</VirtualHost>
+
+<VirtualHost *:443>
+	ServerName <%= application_domain %>
+	ServerAlias "www.<%= application_domain %>"
+	DocumentRoot "<%= current_path %>/public"
+	
+  SSLEngine on
+  
+  SSLCertificateFile /etc/apache2/<%= application_domain %>.crt
+  SSLCertificateKeyFile /etc/apache2/<%= application_domain %>.key
+
+	# be sure to point to public!!
+	<Directory "<%= current_path %>/public/">
+		AllowOverride all
+		Options -MultiViews
+	</Directory>
+
+	# Cache assets for super-long since name changes if updated
+	<LocationMatch "^/assets/.*-[0-9a-f]{32}.*$">
+		Header unset ETag
+		FileETag None
+		# RFC says only cache for 1 year
+		ExpiresActive On
+		ExpiresDefault "access plus 1 year"
+	</LocationMatch>
+
+
+</VirtualHost>

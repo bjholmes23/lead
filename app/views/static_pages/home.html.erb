@@ -1,0 +1,6 @@
+<h1>StaticPages#home</h1>
+<%= best_in_place_if signed_in? && current_user.admin?, @home_heading, :body, :type => :input %>
+<p>Find me in app/views/static_pages/home.html.erb</p>
+
+<%= render :partial => 'contents/ckfield', :locals => {:content => @home_right_sidebar} %>
+

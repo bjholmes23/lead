@@ -1,0 +1,31 @@
+<%= div_for content do %>
+
+    <% if signed_in? && current_user.admin? %>
+        <div id="ck_<%=content.id%>" contenteditable="true" onblur="updateCK_<%=content.id%>()">
+          <%= content.body.html_safe%>
+        </div>
+
+        <script>
+
+            function updateCK_<%=content.id%>(){
+                $.ajax({
+                    type: "PUT",
+                    dataType: "script",
+                    url: '/contents/<%=content.id%>.json',
+                    contentType: 'application/json',
+                    data: JSON.stringify({ "content":{"body":CKEDITOR.instances.ck_<%=content.id%>.getData()}, _method:'put' })
+                }).done(function( msg )
+                        {
+                        });
+            }
+
+        </script>
+
+    <% else %>
+        <div style="position: relative;">
+          <%= sanitize(content.body.html_safe) %>
+        </div>
+    <%end%>
+
+<%end%>
+

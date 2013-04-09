@@ -1,0 +1,11 @@
+production:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  username: <%= mysql_user %>
+  password: <%= mysql_password %>
+  host: <%= mysql_host %>
+  database: <%= mysql_database %>
+  pool: 5
+  socket: /var/run/mysqld/mysqld.sock
+  timeout: 5000
