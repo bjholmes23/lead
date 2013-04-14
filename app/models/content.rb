@@ -37,4 +37,12 @@ class Content < ActiveRecord::Base
 
   scope :header_brand, where("title = 'header_brand'")
 
+  #sidebars
+
+  scope :home_sidebar, where("title = 'home_sidebar'")
+  scope :about_sidebar, where("title = 'about_sidebar'")
+  scope :wuxi_sidebar, where("title = 'wuxi_sidebar'")
+  scope :services_sidebar, where("title = 'services_sidebar'")
+  scope :contactus_sidebar, where("title = 'contactus_sidebar'")
+
 end

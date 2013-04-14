@@ -1,8 +1,4 @@
 
-<%= best_in_place_if signed_in? && current_user.admin?, @home_heading, :body, :type => :input %>
-
-<%= render :partial => 'contents/ckfield', :locals => {:content => @home_right_sidebar} %>
-
 <%= render :partial => 'sliders/slider'%>
 
 

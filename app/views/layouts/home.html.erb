@@ -35,24 +35,19 @@
   <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
 </head>
 <body>
-
 <%= render :partial => 'shared/navbar'%>
 
 
 <div class="container-fluid">
   <div class="row-fluid">
-    <div class="span6 offset2">
+
+    <div class="span6 ">
       <%= bootstrap_flash %>
       <%= yield %>
     </div>
     <div class="span3">
-      <div class="well sidebar-nav">
-        <ul class="nav nav-list">
-          <li class="nav-header">Sidebar</li>
-          <li><%= link_to "Link1", "/path1"  %></li>
-          <li><%= link_to "Link2", "/path2"  %></li>
-          <li><%= link_to "Link3", "/path3"  %></li>
-        </ul>
+      <div id="home_sidebar"  class="well sidebar-nav">
+        <%= render :partial => 'contents/ckfield', :locals => {:content => @home_sidebar} %>
       </div><!--/.well -->
     </div><!--/span-->
   </div><!--/row-->

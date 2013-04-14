@@ -12,21 +12,23 @@ class StaticPagesController < ApplicationController
   end
 
 
-
   def home
 
     @home_heading = Content.home_heading.last
     @home_right_sidebar = Content.home_right_sidebar.last
+    @home_sidebar= Content.home_sidebar.last
+
 
     l = Slider.order("position")
     @sliders = l.drop(1)
     @first_slider = l.first
-    @mini_dimension = "100"
+    @mini_dimension = "120"
 
 
   end
 
   def about
+    @about_sidebar= Content.about_sidebar.last
     @about_heading = Content.about_heading.last
     @about_right_sidebar = Content.about_right_sidebar.last
     @about_team= Content.about_team.last
@@ -38,6 +40,7 @@ class StaticPagesController < ApplicationController
 
 
   def services
+    @services_sidebar= Content.services_sidebar.last
     @services_explore= Content.services_explore.last
     @services_invest= Content.services_invest.last
     @services_relocate= Content.services_relocate.last
@@ -45,6 +48,7 @@ class StaticPagesController < ApplicationController
   end
 
   def invest
+    @wuxi_sidebar= Content.wuxi_sidebar.last
     @wuxi_invest= Content.wuxi_invest.last
     @wuxi_wuxi= Content.wuxi_wuxi.last
     @wuxi_living= Content.wuxi_living.last

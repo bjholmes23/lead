@@ -50,7 +50,7 @@
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header"></li>
-              <li> <%= render :partial => 'contents/ckfield', :locals => {:content => @header_brand} %></li>
+              <li> <%= yield(:sidebar) %></li>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->

@@ -1,3 +1,6 @@
+<% provide(:sidebar, "#{render :partial => "contents/ckfield", :locals => {:content => @wuxi_sidebar }}".html_safe) %>
+
+
 <div class="tabbable tabs-left"> <!-- Only required for left/right tabs -->
   <ul class="nav nav-tabs">
     <li class="active"><a href="#tab1" data-toggle="tab">Invest in Wuxi</a></li>
@@ -17,3 +20,7 @@
     </div>
   </div>
 </div>
+
+<script>
+    $('div.cke_editable').attr("contenteditable",true);
+</script>

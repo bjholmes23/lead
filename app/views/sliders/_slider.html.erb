@@ -3,51 +3,60 @@
 </script>
 
 
-<div id="myCarousel" class="carousel slide">
+<div id="myCarousel" class="carousel slide" style="position:relative">
 
+  <div id="custom-indicators" class="carousel-indicators rounded" style="">
+
+    <div data-target="#myCarousel" data-slide-to="0" class="active tilt">  <a href="javascript:void(0)" onclick="carouselSwitch(0);">  <%= image_tag @first_slider.picture_url(:medium), :size => "#{@mini_dimension}x#{@mini_dimension}", :class => "carimage" %> </a></div>
+
+    <% i=1 %>
+    <% @sliders.each do |slider| %>
+
+        <div data-target="#myCarousel" data-slide-to="<%=i%>">  <a href="javascript:void(0)" onclick="carouselSwitch(<%=i%>);">  <%= image_tag slider.picture_url(:medium), :size => "#{@mini_dimension}x#{@mini_dimension}", :class => "carimage" %> </a></div>
+        <% i += 1 %>
+    <%end%>
+
+  </div>
   <!-- Carousel items -->
   <div class="carousel-inner rounded">
     <div class="active item" >
       <div class="slider-title">
-        <h4>  <%= @first_slider.title %> </h4>
+        <h3>  <%= @first_slider.title %> </h3>
       </div>
       <div class="slider-body wordwrap">
         <h5><%= @first_slider.body %></h5>
       </div>
-        <div class="carousel-image" style="background-image:url('<%=@first_slider.picture_url(:medium)%>');background-repeat:no-repeat;height:450px;">
+
+      <% if false %>
+        <div class="carousel-image rounded" style="background-image:url('<%=@first_slider.picture_url(:medium)%>');background-repeat:no-repeat;height:400px;">
         </div>
+          <%end%>
 
-
-
+      <a href="<%=@first_slider.link%>">
+        <%= image_tag @first_slider.picture_url(:medium) %>
+      </a>
     </div>
     <% @sliders.each do |slider| %>
 
         <div class="item">
           <div class="slider-title">
-            <h4>  <%= slider.title %> </h4>
+            <h3>  <%= slider.title %> </h3>
           </div>
           <div class="slider-body wordwrap">
             <h5><%= slider.body %></h5>
           </div>
+          <% if false %>
 
-          <div class="carousel-image"style="background-image:url('<%=slider.picture_url(:medium)%>');background-repeat:no-repeat;height:450px;">
+        <div class="carousel-image rounded"style="background-image:url('<%=slider.picture_url(:medium)%>');background-repeat:no-repeat;height:400px;">
             </div>
-
+          <%end%>
+          <a href="<%=slider.link%>">
+            <%= image_tag slider.picture_url(:medium) %>
+          </a>
         </div>
     <% end %>
   </div>
-  <div id="custom-indicators" class="carousel-indicators rounded" style="vertical-align:none; z-index: 0">
 
-    <div data-target="#myCarousel" data-slide-to="0" class="active tilt">  <a href="javascript:void(0)" onclick="carouselSwitch(0);">  <%= image_tag @first_slider.picture_url(:thumb), :size => "#{@mini_dimension}x#{@mini_dimension}", :class => "carimage" %> </a></div>
-
-    <% i=1 %>
-    <% @sliders.each do |slider| %>
-
-        <div data-target="#myCarousel" data-slide-to="<%=i%>">  <a href="javascript:void(0)" onclick="carouselSwitch(<%=i%>);">  <%= image_tag slider.picture_url(:thumb), :size => "#{@mini_dimension}x#{@mini_dimension}", :class => "carimage" %> </a></div>
-        <% i += 1 %>
-    <%end%>
-
-  </div>
 </div>
 
 

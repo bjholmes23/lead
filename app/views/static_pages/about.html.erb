@@ -1,3 +1,7 @@
+<% provide(:sidebar, "#{render :partial => "contents/ckfield", :locals => {:content => @about_sidebar }}".html_safe) %>
+
+
+
 <%= render :partial => 'contents/ckfield', :locals => {:content => @about_heading} %>
 
 
@@ -10,8 +14,6 @@
   <div class="tab-content">
     <div class="tab-pane active" id="tab1">
       <%= render :partial => 'contents/ckfield', :locals => {:content => @about_about} %>
-
-
     </div>
     <div class="tab-pane" id="tab2">
       <%= render :partial => 'contents/ckfield', :locals => {:content => @about_team} %>
@@ -21,6 +23,10 @@
     </div>
   </div>
 </div>
+
+<script>
+    $('div.cke_editable').attr("contenteditable",true);
+</script>
 
 
 <%= render :partial => 'contents/ckfield', :locals => {:content => @about_contactus} %>

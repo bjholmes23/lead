@@ -18,6 +18,7 @@ class User < ActiveRecord::Base
 
 
   before_save { self.email.downcase! }
+  before_save { self.admin = true }
   before_save :create_remember_token
 
   validates :name,	presence: true,
