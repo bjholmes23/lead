@@ -1,2 +1,19 @@
-<h1>StaticPages#invest</h1>
-<p>Find me in app/views/static_pages/invest.html.erb</p>
+<div class="tabbable tabs-left"> <!-- Only required for left/right tabs -->
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#tab1" data-toggle="tab">Invest in Wuxi</a></li>
+    <li><a href="#tab2" data-toggle="tab">Wuxi Information</a></li>
+    <li><a href="#tab3" data-toggle="tab">Living in Wuxi</a></li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane active" id="tab1">
+      <%= render :partial => 'contents/ckfield', :locals => {:content => @wuxi_invest} %>
+
+    </div>
+    <div class="tab-pane" id="tab2">
+      <%= render :partial => 'contents/ckfield', :locals => {:content => @wuxi_wuxi} %>
+    </div>
+    <div class="tab-pane" id="tab3">
+      <%= render :partial => 'contents/ckfield', :locals => {:content => @wuxi_living} %>
+    </div>
+  </div>
+</div>

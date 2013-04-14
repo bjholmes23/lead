@@ -9,6 +9,13 @@ Wuxilead::Application.routes.draw do
 
   resources :contents
 
+  match '/home(.:format)',    to: 'static_pages#home'
+  match '/about',    to: 'static_pages#about'
+  match '/wuxi',    to: 'static_pages#invest'
+  match '/services',    to: 'static_pages#services'
+
+
+
   get "static_pages/home"
   get "static_pages/about"
   get "static_pages/contact"

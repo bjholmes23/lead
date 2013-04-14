@@ -1,5 +1,6 @@
 <h2><%= t('.contact_us') %></h2>
 <%= form_for @contact, :url => contacts_path, :html => {:class => 'formtastic'} do |f| %>
+    <ul style="    list-style-type: none;">
   <% if ContactUs.require_name %>
     <li class='string required' id='contact_us_contact_name_input'>
       <%= f.label :name, (t('.name') + content_tag(:abbr, '*', :class => 'required')).html_safe %>
@@ -27,12 +28,13 @@
   <% end %>
   <li class='text required' id='contact_us_contact_message_input'>
     <%= f.label :message, (t('.message') + content_tag(:abbr, '*', :class => 'required')).html_safe %>
-    <%= f.text_area :message %>
+    <%= f.text_area :message, :rows => "5" %>
     <% if f.object.errors[:message].present? %>
       <p class='inline-error'><%= f.object.errors[:message].join(' and ') %></p>
     <% end %>
   </li>
   <li class='commit'>
-    <%= f.submit :submit, :alt => t('.submit'), :class => 'submit create', :label => t('.submit'), :title => t('.submit') %>
+    <%= f.submit :submit, :alt => t('.submit'), :class => 'submit create btn', :label => t('.submit'), :title => t('.submit') %>
   </li>
+    </ul>
 <% end %>
