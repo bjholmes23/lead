@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @slider.title %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%= @slider.body %>
+</p>
+
+<p>
+  <b>Link:</b>
+  <%= @slider.link %>
+</p>
+
+<p>
+  <b>Picture:</b>
+  <%= @slider.picture %>
+</p>
+
+<p>
+  <b>Shortbody:</b>
+  <%= @slider.shortbody %>
+</p>
+
+
+<%= link_to 'Edit', edit_slider_path(@slider) %> |
+<%= link_to 'Back', sliders_path %>

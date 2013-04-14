@@ -1,0 +1,38 @@
+<h1>Listing sliders</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Body</th>
+    <th>Link</th>
+    <th>Picture</th>
+    <th>Shortbody</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+</table>
+
+
+<ul id="sliders" data-update-url="<%= sort_sliders_url %>">
+
+
+  <% @sliders.each do |slider| %>
+      <%= content_tag_for :li, slider do %>
+          <span class="handle">[drag]</span>
+          <%= slider.title %>
+    <%= slider.body %>
+    <%= slider.link %>
+    <%= slider.picture %>
+    <%= slider.shortbody %>
+    <%= link_to 'Show', slider %>
+    <%= link_to 'Edit', edit_slider_path(slider) %>
+    <%= link_to 'Destroy', slider, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <% end %>
+
+<% end %>
+
+<br />
+
+<%= link_to 'New Slider', new_slider_path %>

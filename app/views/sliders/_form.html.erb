@@ -1,0 +1,88 @@
+<%= form_for(@slider) do |f| %>
+  <% if @slider.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@slider.errors.count, "error") %> prohibited this slider from being saved:</h2>
+
+      <ul>
+      <% @slider.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :body %><br />
+    <%= f.text_field :body %>
+  </div>
+  <div class="field">
+    <%= f.label :link %><br />
+    <%= f.text_field :link %>
+  </div>
+
+    <div class="field">
+      <%= f.label :shortbody %><br />
+      <%= f.text_field :shortbody %>
+    </div>
+
+
+      <% if f.object.picture_url(:medium) %>
+        <div id="preview" class="preview">
+        <%= image_tag f.object.picture_url(:medium), :id => "image_preview"  %>
+        </div>
+          <%else%>
+        <div id="preview" class="preview">
+        <%= image_tag "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", :id => "image_preview"  %>
+        </div>
+          <%end%>
+
+
+
+    <div class="field">
+      <%= f.label :picture %><br />
+      <%= f.file_field :picture,onchange:"handleFiles(this.files)", :id => "image_upload"%>
+    </div>
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+
+
+
+
+
+
+<script>
+
+    function handleFiles(files) {
+        for (var i = 0; i < files.length; i++) {
+            var file = files[i];
+            var imageType = /image.*/;
+
+            if (!file.type.match(imageType)) {
+                continue;
+            }
+
+            $("#preview").html('');
+
+            var img = document.createElement("img");
+            img.classList.add("obj");
+
+            img.file = file;
+            preview.appendChild(img);
+
+
+            var reader = new FileReader();
+            reader.onload = (function(aImg) { return function(e) { aImg.src = e.target.result; }; })(img);
+            reader.readAsDataURL(file);
+        }
+    }
+</script>
+

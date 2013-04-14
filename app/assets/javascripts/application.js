@@ -18,7 +18,11 @@
 //= require twitter/bootstrap
 //= require ckeditor/init
 //= require_tree .
+//= require_self
+
 
 jQuery(".best_in_place").best_in_place();
+
+var CKEDITOR_BASEPATH = '/assets/ckeditor/';
 
 

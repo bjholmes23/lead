@@ -15,6 +15,7 @@ gem 'bcrypt-ruby', '3.0.1'
 gem 'best_in_place'
 gem "ckeditor"
 gem 'contact_us', '~> 0.4.0'
+gem 'acts_as_list'
 
 group :development do
   gem 'annotate', '2.5.0'

@@ -1,8 +1,13 @@
 Wuxilead::Application.routes.draw do
+
+  resources :sliders do
+    collection { post :sort }
+  end
+
+
   mount Ckeditor::Engine => '/ckeditor'
 
   resources :contents
-
 
   get "static_pages/home"
   get "static_pages/about"
