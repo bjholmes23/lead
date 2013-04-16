@@ -22,7 +22,7 @@ class StaticPagesController < ApplicationController
     l = Slider.order("position")
     @sliders = l.drop(1)
     @first_slider = l.first
-    @mini_dimension = "100"
+    @mini_dimension = "140"
 
 
   end

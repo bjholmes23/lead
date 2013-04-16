@@ -51,7 +51,7 @@
 
     <div data-target="#myCarousel" data-slide-to="0" class="active tilt">
       <a href="javascript:void(0)" onclick="carouselSwitch(0);">
-        <%= image_tag @first_slider.picture_url(:medium), :height => "#{@mini_dimension}", :class => "carimage" %>
+        <%= image_tag @first_slider.picture_url(:medium), :size => "120x#{@mini_dimension}", :class => "carimage" %>
           <h7><span><%= @first_slider.shortbody %></span></h7>
       </a></div>
 
@@ -59,7 +59,7 @@
     <% @sliders.each do |slider| %>
 
         <div data-target="#myCarousel" data-slide-to="<%=i%>">  <a href="javascript:void(0)" onclick="carouselSwitch(<%=i%>);">
-           <%= image_tag slider.picture_url(:medium), :height => "#{@mini_dimension}", :class => "carimage" %>
+           <%= image_tag slider.picture_url(:medium), :size => "130x#{@mini_dimension}", :class => "carimage" %>
            <h7><span><%= slider.shortbody %></span></h7>
         </a></div>
         <% i += 1 %>
