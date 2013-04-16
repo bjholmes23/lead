@@ -1,4 +1,4 @@
-source 'http://ruby.taobao.org'
+source 'http://rubygems.org'
 
 gem 'rails', '3.2.11'
 
@@ -25,6 +25,10 @@ end
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+
+group :test, :production do
+  gem 'mysql2'
+end 
 
 
 # Gems used only for assets and not required
