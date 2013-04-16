@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="34f8263e-a18d-4ac1-95a9-96c084454959" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/index.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/contents/_ckfield.html.erb" afterPath="$PROJECT_DIR$/app/views/contents/_ckfield.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/static_pages/about.html.erb" afterPath="$PROJECT_DIR$/app/views/static_pages/about.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/static_pages/invest.html.erb" afterPath="$PROJECT_DIR$/app/views/static_pages/invest.html.erb" />
     </list>
     <ignored path="wuxilead.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,7 +26,7 @@
     <file path="/bootstrap_and_overrides.css.less" changelist="34f8263e-a18d-4ac1-95a9-96c084454959" time="1365946188142" ignored="false" />
     <file path="/_slider.html.erb" changelist="34f8263e-a18d-4ac1-95a9-96c084454959" time="1365944538603" ignored="false" />
     <file path="/application.html.erb" changelist="34f8263e-a18d-4ac1-95a9-96c084454959" time="1365935266736" ignored="false" />
-    <file path="/about.html.erb" changelist="34f8263e-a18d-4ac1-95a9-96c084454959" time="1365940315777" ignored="false" />
+    <file path="/about.html.erb" changelist="34f8263e-a18d-4ac1-95a9-96c084454959" time="1365950775122" ignored="false" />
     <file path="/_navbar.html.erb" changelist="34f8263e-a18d-4ac1-95a9-96c084454959" time="1365935116214" ignored="false" />
     <file path="/invest.html.erb" changelist="34f8263e-a18d-4ac1-95a9-96c084454959" time="1365949837117" ignored="false" />
     <file path="/services.html.erb" changelist="34f8263e-a18d-4ac1-95a9-96c084454959" time="1365939818476" ignored="false" />
@@ -52,7 +51,16 @@
       <file leaf-file-name="about.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/static_pages/about.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="9" selection-start="1125" selection-end="1125" vertical-scroll-proportion="0.61835104">
+            <state line="28" column="23" selection-start="1071" selection-end="1128" vertical-scroll-proportion="0.55851066">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_ckfield.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/contents/_ckfield.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="12" selection-start="256" selection-end="292" vertical-scroll-proportion="-5.625">
               <folding />
             </state>
           </provider>
@@ -61,7 +69,7 @@
       <file leaf-file-name="invest.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/static_pages/invest.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="0" selection-start="914" selection-end="1043" vertical-scroll-proportion="-15.0">
+            <state line="26" column="39" selection-start="962" selection-end="1023" vertical-scroll-proportion="-16.25">
               <folding />
             </state>
           </provider>
@@ -141,7 +149,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/static_pages/contact.html.erb" />
         <option value="$PROJECT_DIR$/app/views/shared/_navbar.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/models/content.rb" />
@@ -156,6 +163,7 @@
         <option value="$PROJECT_DIR$/app/assets/stylesheets/bootstrap_and_overrides.css.less" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/views/static_pages/invest.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/contents/_ckfield.html.erb" />
         <option value="$PROJECT_DIR$/app/views/static_pages/about.html.erb" />
       </list>
     </option>
@@ -893,20 +901,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/contact_us/contacts/new_formtastic.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/contact_us/contacts/new_simple_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/sliders_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -981,6 +975,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/contents/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/static_pages/services.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="16" selection-start="213" selection-end="230" vertical-scroll-proportion="-3.125">
@@ -999,14 +1000,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/static_pages/invest.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="914" selection-end="1043" vertical-scroll-proportion="-15.0">
+        <state line="26" column="39" selection-start="962" selection-end="1023" vertical-scroll-proportion="-16.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/contents/_ckfield.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="12" selection-start="256" selection-end="292" vertical-scroll-proportion="-5.625">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/static_pages/about.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="9" selection-start="1125" selection-end="1125" vertical-scroll-proportion="0.61835104">
+        <state line="28" column="23" selection-start="1071" selection-end="1128" vertical-scroll-proportion="0.55851066">
           <folding />
         </state>
       </provider>
