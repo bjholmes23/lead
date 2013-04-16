@@ -1,7 +1,7 @@
 <% provide(:sidebar, "#{render :partial => "contents/ckfield", :locals => {:content => @contactus_sidebar }}".html_safe) %>
 
 
-<h2><%= t('.contact_us') %></h2>
+<h3><%= best_in_place_if signed_in? && current_user.admin?,@contactus_main, :body, :type => :input %></h3>
 <%= form_for @contact, :url => contacts_path, :html => {:class => 'formtastic'} do |f| %>
     <ul style="    list-style-type: none;">
   <% if ContactUs.require_name %>

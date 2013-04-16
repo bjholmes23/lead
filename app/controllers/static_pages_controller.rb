@@ -22,7 +22,7 @@ class StaticPagesController < ApplicationController
     l = Slider.order("position")
     @sliders = l.drop(1)
     @first_slider = l.first
-    @mini_dimension = "120"
+    @mini_dimension = "100"
 
 
   end
@@ -40,6 +40,7 @@ class StaticPagesController < ApplicationController
 
 
   def services
+    @services_info= Content.services_info.last
     @services_sidebar= Content.services_sidebar.last
     @services_explore= Content.services_explore.last
     @services_invest= Content.services_invest.last

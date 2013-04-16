@@ -5,26 +5,14 @@
 
 <div id="myCarousel" class="carousel slide" style="position:relative">
 
-  <div id="custom-indicators" class="carousel-indicators rounded" style="">
-
-    <div data-target="#myCarousel" data-slide-to="0" class="active tilt">  <a href="javascript:void(0)" onclick="carouselSwitch(0);">  <%= image_tag @first_slider.picture_url(:medium), :size => "#{@mini_dimension}x#{@mini_dimension}", :class => "carimage" %> </a></div>
-
-    <% i=1 %>
-    <% @sliders.each do |slider| %>
-
-        <div data-target="#myCarousel" data-slide-to="<%=i%>">  <a href="javascript:void(0)" onclick="carouselSwitch(<%=i%>);">  <%= image_tag slider.picture_url(:medium), :size => "#{@mini_dimension}x#{@mini_dimension}", :class => "carimage" %> </a></div>
-        <% i += 1 %>
-    <%end%>
-
-  </div>
   <!-- Carousel items -->
   <div class="carousel-inner rounded">
     <div class="active item" >
       <div class="slider-title">
-        <h3>  <%= @first_slider.title %> </h3>
+        <h4 class="emphasis">  <%= @first_slider.title %> </h4>
       </div>
       <div class="slider-body wordwrap">
-        <h5><%= @first_slider.body %></h5>
+        <h5 class="meta-no-italic"><%= @first_slider.body %></h5>
       </div>
 
       <% if false %>
@@ -40,10 +28,10 @@
 
         <div class="item">
           <div class="slider-title">
-            <h3>  <%= slider.title %> </h3>
+            <h4>  <%= slider.title %> </h4>
           </div>
           <div class="slider-body wordwrap">
-            <h5><%= slider.body %></h5>
+            <h5 class="meta-no-italic"><%= slider.body %></h5>
           </div>
           <% if false %>
 
@@ -55,6 +43,28 @@
           </a>
         </div>
     <% end %>
+  </div>
+
+  <!-- <div id="custom-indicators" class="carousel-indicators rounded" style="position:relative"> -->
+
+  <div id="custom-indicators" class="carousel-indicators custom-indicators rounded">
+
+    <div data-target="#myCarousel" data-slide-to="0" class="active tilt">
+      <a href="javascript:void(0)" onclick="carouselSwitch(0);">
+        <%= image_tag @first_slider.picture_url(:medium), :height => "#{@mini_dimension}", :class => "carimage" %>
+          <h7><span><%= @first_slider.shortbody %></span></h7>
+      </a></div>
+
+    <% i=1 %>
+    <% @sliders.each do |slider| %>
+
+        <div data-target="#myCarousel" data-slide-to="<%=i%>">  <a href="javascript:void(0)" onclick="carouselSwitch(<%=i%>);">
+           <%= image_tag slider.picture_url(:medium), :height => "#{@mini_dimension}", :class => "carimage" %>
+           <h7><span><%= slider.shortbody %></span></h7>
+        </a></div>
+        <% i += 1 %>
+    <%end%>
+
   </div>
 
 </div>

@@ -25,13 +25,14 @@ class Content < ActiveRecord::Base
 
   #services page scopes
 
+  scope :services_info, where("title = 'services_info'")
   scope :services_explore, where("title = 'services_explore'")
   scope :services_invest, where("title = 'services_invest'")
   scope :services_relocate, where("title = 'services_relocate'")
   scope :services_management, where("title = 'services_management'")
 
   #contact_us page scopes
-
+  scope :contactus_main, where("title = 'contactus_main'")
 
   #heading
 

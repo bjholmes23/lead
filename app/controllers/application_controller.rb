@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
   def define_instance
     @header_brand= Content.header_brand.last
     @contactus_sidebar= Content.contactus_sidebar.last
+    @contactus_main= Content.contactus_main.last
 
   end
 

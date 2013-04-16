@@ -24,19 +24,23 @@
 <div class="container-fluid">
   <div class="row-fluid">
 
-    <div class="span6 ">
+    <div class="span7 box shadow">
       <%= bootstrap_flash %>
       <%= yield %>
     </div>
-    <div class="span3">
-      <div id="home_sidebar"  class="well sidebar-nav">
+    <div class="span5">
+      <div class="well sidebar-nav rounded">
+        <ul class="nav nav-list">
+          <li class="nav-header"></li>
         <%= render :partial => 'contents/ckfield', :locals => {:content => @home_sidebar} %>
+        </ul>
+
       </div><!--/.well -->
     </div><!--/span-->
   </div><!--/row-->
 
-  <footer>
-    <p>&copy; Company 2013</p>
+  <footer class="meta-caption">
+    <p class="meta-caption"> &copy;Wuxi Lead Consulting 2013 | <%= mail_to "info@wuxilead.com" %> | Site built by Tang Creative Group   </p>
   </footer>
 
 </div> <!-- /container -->

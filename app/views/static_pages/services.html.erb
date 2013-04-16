@@ -1,5 +1,10 @@
 <% provide(:sidebar, "#{render :partial => "contents/ckfield", :locals => {:content => @services_sidebar }}".html_safe) %>
 
+<div class="emphasis">
+  <%= render :partial => 'contents/ckfield', :locals => {:content => @services_info} %></div>
+
+</br>
+
 <div class="accordion" id="accordion2">
 
   <div class="accordion-group">
