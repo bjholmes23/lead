@@ -22,8 +22,8 @@
         </script>
 
     <% else %>
-        <div style="position: relative;">
-          <%= sanitize(content.body.html_safe) %>
+        <div>
+          <%= content.body.html_safe %>
         </div>
     <%end%>
 
