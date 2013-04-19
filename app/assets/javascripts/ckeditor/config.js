@@ -1,5 +1,25 @@
 CKEDITOR.editorConfig = function( config )
+
+
 {
+
+    config.toolbar = [
+
+            ['htmlSource', '-', 'Save', 'NewPage', 'Preview', '-', 'Templates'],
+            ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Print',    'SpellChecker', 'Scayt'],
+            ['Undo', 'Redo', '-', 'Find', '-', 'SelectAll'],
+        ['Link', 'Unlink'],
+        ['Image', 'Table', 'HorizontalRule', 'Smiley', 'SpecialChar'],
+            '/',
+            ['Bold', 'Italic', 'Underline', 'Strike', '-', 'Subscript', 'Superscript'],
+            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', 'Blockquote'],
+            ['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],   ['BidiLtr', 'BidiRtl'],
+
+            '/',
+            ['Styles', 'Format', 'Font', 'FontSize'],
+            ['TextColor', 'BGColor'],
+        ];
+
     config.toolbar_MiniBar =
         [
             { name: 'insert', items : [ 'Image', 'HorizontalRule' ] },
