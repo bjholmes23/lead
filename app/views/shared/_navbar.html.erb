@@ -11,9 +11,9 @@
       <span><h4 class="meta"> <%= best_in_place_if signed_in? && current_user.admin?,@header_brand, :body, :type => :input %></h4></span>
 
 
-      <a class="brand" href="/"><%= image_tag "/images/lead_logo.png", :width => "200px" %></a>
+      <a class="brand" href="/"><%= image_tag "/images/lead_logo.png", :width => "" %></a>
       <div class="container-fluid nav-collapse">
-        <ul class="nav">
+        <ul class="nav topmenu">
           <li class="divider-vertical"></li>
           <li class="<%= "menuhighlight" if params[:action] == "home" %>"><%= link_to "Home", "/"  %></li>
           <li class="divider-vertical"></li>

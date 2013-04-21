@@ -1,30 +1,40 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Title:</b>
-  <%= @slider.title %>
-</p>
+<h2>
+  <%= link_to 'Back', sliders_path %>
+</h2>
 
 <p>
-  <b>Body:</b>
-  <%= @slider.body %>
-</p>
 
-<p>
-  <b>Link:</b>
-  <%= @slider.link %>
-</p>
+<h4><b>Link:</b><%= best_in_place_if signed_in? && current_user.admin?,@slider, :link, :type => :input %>   </h4>
 
-<p>
-  <b>Picture:</b>
-  <%= @slider.picture %>
-</p>
-
-<p>
-  <b>Shortbody:</b>
-  <%= @slider.shortbody %>
 </p>
 
 
-<%= link_to 'Edit', edit_slider_path(@slider) %> |
-<%= link_to 'Back', sliders_path %>
+<div id="myCarousel" class="carousel slide" style="position:relative">
+  <!-- Carousel items -->
+  <div class="carousel-inner rounded">
+    <div class="active item" >
+      <div class="slider-title">
+        <h4 class="emphasis"> <%= best_in_place_if signed_in? && current_user.admin?,@slider, :title, :type => :input %> </h4>
+      </div>
+      <div class="slider-body wordwrap">
+        <h5 class="meta-no-italic"><%= best_in_place_if signed_in? && current_user.admin?,@slider, :body, :type => :input %></h5>
+      </div>
+        <%= image_tag @slider.picture_url(:medium) %>
+    </div>
+
+  </div>
+
+  <!-- <div id="custom-indicators" class="carousel-indicators rounded" style="position:relative"> -->
+
+  <div id="custom-indicators" class="carousel-indicators custom-indicators rounded">
+
+    <div data-target="#myCarousel" data-slide-to="0" class="active tilt">
+        <%= image_tag @slider.picture_url(:medium), :size => "120x#140" %>
+        <h7><span><%= best_in_place_if signed_in? && current_user.admin?,@slider, :shortbody, :type => :input %></span></h7>
+    </div>
+
+  </div>
+
+</div>
