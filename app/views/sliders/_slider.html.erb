@@ -12,7 +12,7 @@
         <h4 class="emphasis">  <%= @first_slider.title %> </h4>
       </div>
       <div class="slider-body wordwrap">
-        <h5 class="meta-no-italic"><%= @first_slider.body %></h5>
+        <h5 class="slider-title"><%= @first_slider.body %></h5>
       </div>
 
       <% if false %>
@@ -31,7 +31,7 @@
             <h4>  <%= slider.title %> </h4>
           </div>
           <div class="slider-body wordwrap">
-            <h5 class="meta-no-italic"><%= slider.body %></h5>
+            <h5 class="slider-title"><%= slider.body %></h5>
           </div>
           <% if false %>
 
@@ -51,7 +51,7 @@
 
     <div data-target="#myCarousel" data-slide-to="0" class="active tilt">
       <a href="javascript:void(0)" onclick="carouselSwitch(0);">
-        <%= image_tag @first_slider.picture_url(:medium), :size => "120x#{@mini_dimension}", :class => "carimage" %>
+        <%= image_tag @first_slider.picture_url(:medium), :size => "130x#{@mini_dimension}", :class => "carimage" %>
           <h7><span><%= @first_slider.shortbody %></span></h7>
       </a></div>
 
@@ -66,7 +66,9 @@
     <%end%>
 
   </div>
-
+  <% if signed_in? && current_user.admin? %>
+  <%= link_to "Edit sliding images", sliders_path %>
+      <%end%>
 </div>
 
 

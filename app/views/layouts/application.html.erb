@@ -20,15 +20,15 @@
 
   <%= render :partial => 'shared/navbar'%>
 
-  <div class="container-fluid">
+  <div class="container">
       <div class="row-fluid">
 
-        <div class="span8">
+        <div class="span8 offset1">
           <%= bootstrap_flash %>
           <%= yield %>
         </div>
 
-        <div class="span4">
+        <div class="span3">
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header"></li>
@@ -37,12 +37,15 @@
           </div><!--/.well -->
         </div><!--/span-->
       </div><!--/row-->
+    <div class="row-fluid">
 
-      <footer class="meta-caption">
+    <footer class="meta-caption">
         <p class="meta-caption"> &copy;Wuxi Lead Consulting 2013 | <%= mail_to "info@wuxilead.com" %> | Site built by Tang Creative Group   </p>
       </footer>
+    </div><!--/row-->
 
-    </div> <!-- /container -->
+
+  </div> <!-- /container -->
 
     <!-- Javascripts
     ================================================== -->
