@@ -1,3 +1,5 @@
+This is a website with CMS functionality run on Rails that I quickly built for a friend's consulting business called WuxiLead. The business has since shut down. 
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
